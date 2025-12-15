@@ -1,0 +1,88 @@
+// секция employees
+.employees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  flex-shrink: 0;
+  padding-top: 60px;
+}
+// имя
+.employee__name {
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-names;
+  padding-top: 20px;
+}
+// должность
+.employee__position {
+  font-size: 18px;
+  font-weight: 300;
+  color: $color-professions;
+}
+// сотрудник
+.employee {
+  cursor: $cursor;
+  margin-bottom: 150px;
+}
+// фото сотрудника
+.jhon,
+.alex,
+.elena,
+.lily {
+  display: block;
+  width: 270px;
+  height: 270px;
+  background-size: 270px 270px;
+  background-repeat: no-repeat;
+}
+.jhon {
+  background-image: url(../ITlife_img/Pink\ Floyd.jpg);
+}
+.alex {
+  background-image: url(../ITlife_img/Alex.jpg);
+}
+.elena {
+  background-image: url(../ITlife_img/Elena.jpg);
+}
+.lily {
+  background-image: url(../ITlife_img/Lily.jpg);
+}
+
+// ADAPTIVE ==================================
+
+@media (max-width: 1025px) {
+  .employees {
+    gap: 85px;
+  }
+  .titles__text {
+    padding-top: 180px;
+  }
+  .employee {
+    margin-bottom: 0px;
+  }
+  .artist-elena,
+  .designer-lily {
+    margin-bottom: 85px;
+  }
+}
+
+@media (max-width: 769px) {
+  .titles__text {
+    padding-top: 120px;
+  }
+  .footer__content {
+    padding: 40px 0;
+  }
+}
+@media (max-width: 426px) {
+  .artist-elena {
+    margin-bottom: 0px;
+  }
+  .designer-lily {
+    margin-bottom: 50px;
+  }
+  .employees {
+    gap: 50px;
+  }
+}

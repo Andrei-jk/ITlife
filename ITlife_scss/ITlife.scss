@@ -1,0 +1,25 @@
+// ITlife.scss является основным scss файлом всего этого проекта и именно ОН подключен в HTML
+// @font-face {
+//   font-family: "Lato Semibold";
+//   src: url("Lato-SemiboldItalic.eot");
+//   src: url("Lato-SemiboldItalic.eot?#iefix") format("embedded-opentype"),
+//     url("Lato-SemiboldItalic.woff") format("woff"),
+//     url("Lato-SemiboldItalic.ttf") format("truetype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+@import "_vars";
+// !ОЧЕНЬ ВАЖНО = большое значение имеет приоритет подключения файлов. Если, к примеру файл _vars опустить ниже файла _header, то  _header НЕ БУДЕТ видеть переменные и компилятор будет выдавать ошибку. Здесь принцип JS = все считывается сначала и браузер считает _header, не увидит переменных и выдасть ошибку, а только ПОТОМ считает переменные
+@import "_reset";
+@import "_header";
+@import "_titles";
+@import "_active-card";
+@import "_employees";
+@import "_footer";
+@import "_popup-logo";
+@import "_popup-data";
+@import "_accordeon-data";
+body {
+  // fonts
+  font-family: "Lato", sans-serif;
+}

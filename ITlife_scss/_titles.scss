@@ -1,0 +1,40 @@
+// задаем цвет основного поля
+.basic{
+  background-color: $color-main;
+}
+// задаем контейнер для основного контента
+.content__container {
+  max-width: $main-container;
+  margin: 0 auto;
+  padding: $padding-main-container;
+}
+// контейнер для текста
+.titles__text {
+  max-width: 570px;
+  margin: 0 auto;
+  padding-top: 230px;
+  text-align: center;
+}
+h1 {
+  color: $main-text;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 4.42px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+// разделитель
+.titles__divider {
+  width: 45px;
+  height: 4px;
+  background-color: #dddbdb;
+  margin: 0 auto 40px;
+}
+// вспомогательный текст
+h3 {
+  color: $main-text;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px; /* 150% */
+}

@@ -1,0 +1,125 @@
+// само активное поле
+.active__choice, .active__choice1, .active__choice2, .active__choice3 {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  background-color: $color-active;
+  cursor: $cursor;
+  z-index: 12;
+}
+#active{
+    display: none;
+}
+
+// контейнер с социальными сетями
+.active__container-social {
+  // позиционируем по центру
+  position: absolute;
+  width: 134.004px;
+  height: 42px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: calc(50% - 21px);
+  // флексуем
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  cursor: $cursor;
+}
+
+// соцсети блока active
+// twitter
+.active__twitter {
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
+// twitter - ссылка
+.active__twitter-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-network;
+  cursor: $cursor;
+}
+// twitter - картинка
+.twitter__svg-active {
+  margin: 13px 11px;
+  cursor: $cursor;
+  fill: $color-header;
+}
+
+// facebook
+.active__facebook {
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
+// facebook - ссылка
+.active__facebook-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-network;
+  cursor: $cursor;
+}
+// facebook - картинка
+.facebook__svg-active {
+  margin: 11.5px 14.5px;
+  cursor: $cursor;
+  fill: $color-header;
+}
+
+// instagram
+.active__instagram {
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
+// instagram - ссылка
+.active__instagram-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-network;
+  cursor: $cursor;
+}
+// instagram - картинка
+.instagram__svg-active {
+  margin: 11px;
+  cursor: $cursor;
+  fill: $color-header;
+}
+
+// ..........................................................
+
+// дополнительныен классы, которые инвертируют картинки соцсетей и добавляются через jQuery
+.white {
+  fill: $color-active;
+}
+.white__svg {
+  background-color: $color-header;
+}
+// ............................................
+
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// скрывающие классы
+.hide{
+  display: none;
+}
+.show{
+  opacity: 0;
+  visibility: hidden;
+}
+
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

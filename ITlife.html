@@ -1,0 +1,703 @@
+<!-- project started 17.10.2023 14.00 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+   <!-- icon -->
+   <link rel="icon" href="ITlife_img/icon.ico" />
+   <!-- normalize connection directly from the server-->
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize-opentype.css/0.2.4/normalize-opentype.min.css"
+      integrity="sha512-C7dUXX4Gjv3oOFwuIJ2bMn+ZDvAlCLKH5JKzHMYVQUecTEVkHzu/SL5N6hkyOWyUdV13EIZDukiFcAl9LU/hAg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- styles -->
+   <link rel="stylesheet" href="ITlife_css/ITlife.css" />
+   <title>Document</title>
+</head>
+
+<body>
+
+   <!-- ========================================= -->
+   <!-- ========================================= -->
+
+   <header class="header">
+      <!-- контейнер который ограничит ширину контентной части header -->
+      <div class="header__container">
+         <!-- флекс контейнер для header-->
+         <div class="header__flex">
+            <!-- логотип -->
+            <a href="#" id="btnOpenPopupLogo" class="header__logo">
+               <img class="logo__img" src="ITlife_img/logo.svg" alt="logo">
+            </a>
+
+            <!-- todo попап А.Дудукало на JS (на Logo) -->
+            <!-- вся затемненная модальная область в которой будет окно -->
+            <div id="hiddenArea" class="logo__hidden-area">
+               <!-- чтобы popup можно было закрыть в любом месте экрана запишем ссылку которую растянем на всю модальную область -->
+               <a href="#!" id="id-for-close-hidden-area" class="logo__link-for-close-hidden-area"></a>
+               <!-- само модальное окно -->
+               <div class="logo__modal-window">
+                  <!-- заголовок -->
+                  <div class="logo__zagolovok-for-modal-window">
+                     Modal window for Logo
+                  </div>
+                  <!-- кнопка закрытия окна -->
+                  <button id="id-for-close-modal-window" class="logo__btn-for-close-modal-window">&times;</button>
+                  <!-- контент модального окна-->
+                  <p class="logo__content-modal-window">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
+                     eos inventore est
+                     minima obcaecati animi fugiat aliquid repellat, libero et officiis consequuntur fugit non maiores
+                     odit eaque laboriosam! Similique, temporibus.
+                     Vel explicabo magni minima iste adipisci voluptatibus commodi sit dolores quibusdam. Dolorem, fuga
+                     iure. Nihil, hic! Accusantium cum architecto nisi totam odit, veritatis iure voluptate maiores quas
+                     consectetur eveniet aspernatur?
+                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi eos inventore est
+                     minima obcaecati animi fugiat aliquid repellat, libero et officiis consequuntur fugit non maiores
+                     odit eaque laboriosam! Similique, temporibus.
+                     Vel explicabo magni minima iste adipisci voluptatibus commodi sit dolores quibusdam.</p>
+               </div>
+            </div>
+            <!-- todo попап А.Дудукало на JS (на Logo) -->
+
+            <!-- бургер (закрывающий крестик-кнопка)-->
+            <div class="header__burger">
+               <!-- span это средняя линия в крестике-бургере -->
+               <span></span>
+            </div>
+            <!-- меню -->
+            <nav class="header__menu">
+               <!-- список меню -->
+               <ul class="header__list">
+
+                  <!-- todo попапы ITDoctor на JS -->
+                  <!-- пункты списка -->
+                  <li class="points">
+                     <!-- ссылка пункта (кнопка для открытия модальной области) -->
+                     <a href="#" data-btn-for-open-modal-area="area-menu1" class="header__link">Home</a>
+                     <!-- вся модальная область (в ней окно и весь контент) -->
+                     <div data-modal-area id="area-menu1" class="modal__area1 hide">
+                        <!-- модальное окно -->
+                        <div class="modal__window-1">
+                           <!-- флекс для заголовка и кнопки закрытия окна -->
+                           <div class="flex-for-zagolovok-and-btn-close-1">
+                              <!-- заголовок -->
+                              <div class="modal__zagolovok-1">Modal window from ITDoctor 1</div>
+                              <!-- кнопка закрытия модального окна -->
+                              <a href="#!" data-modal-btn-for_close="closeBtn1" class="modal__close-btn">&times;</a>
+                           </div>
+                           <!-- контент модального окна -->
+                           <p class="modal__card-content1">Lorem ipsum dolor sit amet consectetur
+                              adipisicing elit. Voluptas tempore impedit
+                              eum cum. Quaerat, culpa. Excepturi doloremque assumenda quasi? Fugiat,
+                              quidem possimus deleniti explicabo
+                              cum qui sint ipsa magnam commodi?
+                              Lorem ipsum dolor sit amet consectetur
+                              adipisicing elit. Voluptas tempore impedit
+                              eum cum. Quaerat, culpa. Excepturi doloremque assumenda quasi? Fugiat,
+                              quidem possimus deleniti explicabo
+                              cum qui sint ipsa magnam commodi?Lorem ipsum dolor sit amet consectetur
+                              adipisicing elit. Voluptas tempore impedit
+                              eum cum. Quaerat, culpa. Excepturi doloremque assumenda quasi? Fugiat,
+                              quidem possimus deleniti explicabo
+                              cum qui sint ipsa magnam commodi?</p>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="points">
+                     <!-- ссылка пункта (кнопка для открытия модальной области) -->
+                     <a href="#" data-btn-for-open-modal-area="area-menu2" class="header__link">services</a>
+                     <!-- вся модальная область (в ней окно и весь контент) -->
+                     <div data-modal-area id="area-menu2" class="modal__area2 hide">
+                        <!-- модальное окно -->
+                        <div class="modal__window-2">
+                           <!-- флекс для заголовка и кнопки закрытия окна -->
+                           <div class="flex-for-zagolovok-and-btn-close-2">
+                              <!-- заголовок -->
+                              <div class="modal__zagolovok-2">Modal window from ITDoctor 2</div>
+                              <!-- кнопка закрытия модального окна -->
+                              <a href="#!" data-modal-btn-for_close="closeBtn2" class="modal__close-btn">&times;</a>
+                           </div>
+                           <!-- контент модального окна -->
+                           <p class="modal__card-content2">Lorem ipsum dolor sit amet consectetur
+                              adipisicing elit. Voluptas tempore impedit
+                              eum cum. Quaerat, culpa. Excepturi doloremque assumenda quasi? Fugiat,
+                              quidem possimus deleniti explicabo
+                              cum qui sint ipsa magnam commodi?</p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="points">
+                     <!-- ссылка пункта (кнопка для открытия модальной области) -->
+                     <a href="#" data-btn-for-open-modal-area="area-menu3" class="header__link">About</a>
+                     <!-- вся модальная область (в ней окно и весь контент) -->
+                     <div data-modal-area id="area-menu3" class="modal__area3 hide">
+                        <!-- модальное окно -->
+                        <div class="modal__window-3">
+                           <!-- флекс для заголовка и кнопки закрытия окна -->
+                           <div class="flex-for-zagolovok-and-btn-close-3">
+                              <!-- заголовок -->
+                              <div class="modal__zagolovok-3">Modal window from ITDoctor 3</div>
+                              <!-- кнопка закрытия модального окна -->
+                              <a href="#!" data-modal-btn-for_close="closeBtn3" class="modal__close-btn">&times;</a>
+                           </div>
+                           <!-- контент модального окна -->
+                           <p class="modal__card-content3">Lorem ipsum dolor sit amet consectetur
+                              adipisicing elit. Voluptas tempore impedit
+                              eum cum. Quaerat, culpa. Excepturi doloremque assumenda quasi? Fugiat,
+                              quidem possimus deleniti explicabo
+                              cum qui sint ipsa magnam commodi?</p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="points">
+                     <!-- ссылка пункта (кнопка для открытия модальной области) -->
+                     <a href="#" data-btn-for-open-modal-area="area-menu4" class="header__link">contacts</a>
+                     <!-- вся модальная область (в ней окно и весь контент) -->
+                     <div data-modal-area id="area-menu4" class="modal__area4 hide">
+                        <!-- модальное окно -->
+                        <div class="modal__window-4">
+                           <!-- флекс для заголовка и кнопки закрытия окна -->
+                           <div class="flex-for-zagolovok-and-btn-close-4">
+                              <!-- заголовок -->
+                              <div class="modal__zagolovok-4">Modal window from ITDoctor 4</div>
+                              <!-- кнопка закрытия модального окна -->
+                              <a href="#!" data-modal-btn-for_close="closeBtn4" class="modal__close-btn">&times;</a>
+                           </div>
+                           <!-- контент модального окна -->
+                           <p class="modal__card-content4">Lorem ipsum dolor sit amet consectetur
+                              adipisicing elit. Voluptas tempore impedit
+                              eum cum. Quaerat, culpa. Excepturi doloremque assumenda quasi? Fugiat,
+                              quidem possimus deleniti explicabo
+                              cum qui sint ipsa magnam commodi?</p>
+                        </div>
+                     </div>
+                  </li>
+                  <!-- todo попапы ITDoctor на JS -->
+
+                  <!-- ==== -->
+                  <button class="header__collback">
+                     <!-- ссылка-кнопка callback -->
+                     <a href="#" class="header__link-collback">callback</a>
+                  </button>
+                  <!-- ==== -->
+
+               </ul>
+            </nav>
+            <!-- кнопка collback -->
+            <button class="header__collback">
+               <!-- ссылка callback -->
+               <a href="#" class="header__link-collback">callback</a>
+            </button>
+         </div>
+      </div>
+   </header>
+
+   <!-- ========================================= -->
+   <!-- ========================================= -->
+
+   <!-- основной блок -->
+   <main class="basic">
+      <!-- ограничивающий контейнер для основного блока -->
+      <div class="content__container">
+         <!-- секция текста -->
+         <section class="titles__text">
+            <!-- заголовок -->
+            <h1 class="title__main">who we are</h1>
+            <!-- разделитель между текстами -->
+            <div class="titles__divider"></div>
+            <!-- вспомогательный текст -->
+            <h3 class="title__auxiliary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+               incididunt ut labore et dolore magna
+               aliqua.</h3>
+         </section>
+         <!-- секция карточек сотрудников -->
+         <section class="employees">
+            <div class="employee">
+               <!-- фото сотрудника -->
+               <div class="employee__photo jhon">
+
+                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                  <section class="active__choice hide">
+                     <!-- соцсети -->
+                     <div class="active__container-social">
+                        <!-- active__twitter -->
+                        <div class="active__twitter">
+                           <a href="#!" class="active__twitter-link">
+                              <svg class="twitter__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
+                                 viewBox="0 0 20 18" fill="none">
+                                 <path
+                                    d="M17.9441 4.92638C17.9568 5.10403 17.9568 5.28173 17.9568 5.45938C17.9568 10.8781 13.8325 17.1218 6.29441 17.1218C3.97207 17.1218 1.81473 16.4492 0 15.2817C0.329961 15.3198 0.647187 15.3325 0.989844 15.3325C2.90605 15.3325 4.67004 14.6853 6.07867 13.5812C4.27664 13.5431 2.76648 12.3629 2.24617 10.7386C2.5 10.7766 2.75379 10.802 3.02031 10.802C3.38832 10.802 3.75637 10.7512 4.09898 10.6624C2.22082 10.2817 0.812148 8.63196 0.812148 6.63958V6.58884C1.35781 6.89341 1.99238 7.08376 2.66492 7.10911C1.56086 6.37306 0.837539 5.11673 0.837539 3.6954C0.837539 2.93399 1.04055 2.23603 1.3959 1.62688C3.41367 4.11419 6.44668 5.73853 9.84766 5.91622C9.78422 5.61165 9.74613 5.29442 9.74613 4.97716C9.74613 2.71825 11.5736 0.878174 13.8451 0.878174C15.0253 0.878174 16.0913 1.3731 16.84 2.17259C17.7664 1.99493 18.6547 1.65228 19.4416 1.18274C19.137 2.13454 18.4898 2.93403 17.6395 3.44161C18.4644 3.35282 19.2639 3.12435 19.9999 2.80712C19.4416 3.61927 18.7436 4.34259 17.9441 4.92638Z" />
+                              </svg>
+                           </a>
+                        </div>
+                        <!-- active__facebook -->
+                        <div class="active__facebook">
+                           <a href="#!" class="active__facebook-link">
+                              <svg class="facebook__svg-active" xmlns="http://www.w3.org/2000/svg" width="12"
+                                 height="20" viewBox="0 0 12 20" fill="none">
+                                 <path
+                                    d="M10.6539 11.25L11.2094 7.63047H7.73635V5.28164C7.73635 4.29141 8.22151 3.32617 9.77698 3.32617H11.3559V0.244531C11.3559 0.244531 9.92307 0 8.55315 0C5.69299 0 3.82346 1.73359 3.82346 4.87187V7.63047H0.644165V11.25H3.82346V20H7.73635V11.25H10.6539Z" />
+                              </svg>
+                           </a>
+                        </div>
+                        <!-- active__instagram -->
+                        <div class="active__instagram">
+                           <a href="#!" class="active__instagram-link">
+                              <svg class="instagram__svg-active" xmlns="http://www.w3.org/2000/svg" width="20"
+                                 height="20" viewBox="0 0 20 20" fill="none">
+                                 <path
+                                    d="M10.0045 4.87225C7.16613 4.87225 4.87672 7.16166 4.87672 10C4.87672 12.8383 7.16613 15.1277 10.0045 15.1277C12.8428 15.1277 15.1322 12.8383 15.1322 10C15.1322 7.16166 12.8428 4.87225 10.0045 4.87225ZM10.0045 13.3337C8.17026 13.3337 6.67076 11.8387 6.67076 10C6.67076 8.16133 8.16579 6.6663 10.0045 6.6663C11.8431 6.6663 13.3382 8.16133 13.3382 10C13.3382 11.8387 11.8387 13.3337 10.0045 13.3337ZM16.538 4.6625C16.538 5.32746 16.0025 5.85853 15.342 5.85853C14.677 5.85853 14.1459 5.32299 14.1459 4.6625C14.1459 4.00201 14.6815 3.46647 15.342 3.46647C16.0025 3.46647 16.538 4.00201 16.538 4.6625ZM19.9342 5.87638C19.8583 4.27424 19.4924 2.85507 18.3186 1.68582C17.1494 0.516568 15.7302 0.150619 14.1281 0.070289C12.4769 -0.0234297 7.52761 -0.0234297 5.87638 0.070289C4.2787 0.146156 2.85953 0.512105 1.68582 1.68136C0.512105 2.85061 0.150619 4.26978 0.070289 5.87192C-0.0234297 7.52315 -0.0234297 12.4724 0.070289 14.1236C0.146156 15.7258 0.512105 17.1449 1.68582 18.3142C2.85953 19.4834 4.27424 19.8494 5.87638 19.9297C7.52761 20.0234 12.4769 20.0234 14.1281 19.9297C15.7302 19.8538 17.1494 19.4879 18.3186 18.3142C19.4879 17.1449 19.8538 15.7258 19.9342 14.1236C20.0279 12.4724 20.0279 7.52761 19.9342 5.87638ZM17.801 15.8953C17.4529 16.7701 16.779 17.4439 15.8998 17.7965C14.5833 18.3186 11.4593 18.1981 10.0045 18.1981C8.54959 18.1981 5.42118 18.3142 4.10912 17.7965C3.23441 17.4484 2.56053 16.7745 2.20797 15.8953C1.68582 14.5788 1.80632 11.4549 1.80632 10C1.80632 8.54513 1.69028 5.41671 2.20797 4.10465C2.55606 3.22995 3.22995 2.55606 4.10912 2.2035C5.42564 1.68136 8.54959 1.80185 10.0045 1.80185C11.4593 1.80185 14.5878 1.68582 15.8998 2.2035C16.7745 2.5516 17.4484 3.22548 17.801 4.10465C18.3231 5.42118 18.2026 8.54513 18.2026 10C18.2026 11.4549 18.3231 14.5833 17.801 15.8953Z" />
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </section>
+                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+               </div>
+               <!-- имя -->
+               <div class="employee__name">John Handson</div>
+               <!-- должность -->
+               <div class="employee__position">Lead designer</div>
+            </div>
+            <!-- ========================================= -->
+            <div class="employee">
+               <!-- фото сотрудника -->
+               <div class="employee__photo alex">
+
+                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                  <section class="active__choice1 hide">
+                     <!-- соцсети -->
+                     <div class="active__container-social">
+                        <!-- active__twitter -->
+                        <div class="active__twitter">
+                           <a href="#!" class="active__twitter-link">
+                              <svg class="twitter__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
+                                 viewBox="0 0 20 18" fill="none">
+                                 <path
+                                    d="M17.9441 4.92638C17.9568 5.10403 17.9568 5.28173 17.9568 5.45938C17.9568 10.8781 13.8325 17.1218 6.29441 17.1218C3.97207 17.1218 1.81473 16.4492 0 15.2817C0.329961 15.3198 0.647187 15.3325 0.989844 15.3325C2.90605 15.3325 4.67004 14.6853 6.07867 13.5812C4.27664 13.5431 2.76648 12.3629 2.24617 10.7386C2.5 10.7766 2.75379 10.802 3.02031 10.802C3.38832 10.802 3.75637 10.7512 4.09898 10.6624C2.22082 10.2817 0.812148 8.63196 0.812148 6.63958V6.58884C1.35781 6.89341 1.99238 7.08376 2.66492 7.10911C1.56086 6.37306 0.837539 5.11673 0.837539 3.6954C0.837539 2.93399 1.04055 2.23603 1.3959 1.62688C3.41367 4.11419 6.44668 5.73853 9.84766 5.91622C9.78422 5.61165 9.74613 5.29442 9.74613 4.97716C9.74613 2.71825 11.5736 0.878174 13.8451 0.878174C15.0253 0.878174 16.0913 1.3731 16.84 2.17259C17.7664 1.99493 18.6547 1.65228 19.4416 1.18274C19.137 2.13454 18.4898 2.93403 17.6395 3.44161C18.4644 3.35282 19.2639 3.12435 19.9999 2.80712C19.4416 3.61927 18.7436 4.34259 17.9441 4.92638Z" />
+                              </svg>
+                           </a>
+                        </div>
+                        <!-- active__facebook -->
+                        <div class="active__facebook">
+                           <a href="#!" class="active__facebook-link">
+                              <svg class="facebook__svg-active" xmlns="http://www.w3.org/2000/svg" width="12"
+                                 height="20" viewBox="0 0 12 20" fill="none">
+                                 <path
+                                    d="M10.6539 11.25L11.2094 7.63047H7.73635V5.28164C7.73635 4.29141 8.22151 3.32617 9.77698 3.32617H11.3559V0.244531C11.3559 0.244531 9.92307 0 8.55315 0C5.69299 0 3.82346 1.73359 3.82346 4.87187V7.63047H0.644165V11.25H3.82346V20H7.73635V11.25H10.6539Z" />
+                              </svg>
+                           </a>
+                        </div>
+                        <!-- active__instagram -->
+                        <div class="active__instagram">
+                           <a href="#!" class="active__instagram-link">
+                              <svg class="instagram__svg-active" xmlns="http://www.w3.org/2000/svg" width="20"
+                                 height="20" viewBox="0 0 20 20" fill="none">
+                                 <path
+                                    d="M10.0045 4.87225C7.16613 4.87225 4.87672 7.16166 4.87672 10C4.87672 12.8383 7.16613 15.1277 10.0045 15.1277C12.8428 15.1277 15.1322 12.8383 15.1322 10C15.1322 7.16166 12.8428 4.87225 10.0045 4.87225ZM10.0045 13.3337C8.17026 13.3337 6.67076 11.8387 6.67076 10C6.67076 8.16133 8.16579 6.6663 10.0045 6.6663C11.8431 6.6663 13.3382 8.16133 13.3382 10C13.3382 11.8387 11.8387 13.3337 10.0045 13.3337ZM16.538 4.6625C16.538 5.32746 16.0025 5.85853 15.342 5.85853C14.677 5.85853 14.1459 5.32299 14.1459 4.6625C14.1459 4.00201 14.6815 3.46647 15.342 3.46647C16.0025 3.46647 16.538 4.00201 16.538 4.6625ZM19.9342 5.87638C19.8583 4.27424 19.4924 2.85507 18.3186 1.68582C17.1494 0.516568 15.7302 0.150619 14.1281 0.070289C12.4769 -0.0234297 7.52761 -0.0234297 5.87638 0.070289C4.2787 0.146156 2.85953 0.512105 1.68582 1.68136C0.512105 2.85061 0.150619 4.26978 0.070289 5.87192C-0.0234297 7.52315 -0.0234297 12.4724 0.070289 14.1236C0.146156 15.7258 0.512105 17.1449 1.68582 18.3142C2.85953 19.4834 4.27424 19.8494 5.87638 19.9297C7.52761 20.0234 12.4769 20.0234 14.1281 19.9297C15.7302 19.8538 17.1494 19.4879 18.3186 18.3142C19.4879 17.1449 19.8538 15.7258 19.9342 14.1236C20.0279 12.4724 20.0279 7.52761 19.9342 5.87638ZM17.801 15.8953C17.4529 16.7701 16.779 17.4439 15.8998 17.7965C14.5833 18.3186 11.4593 18.1981 10.0045 18.1981C8.54959 18.1981 5.42118 18.3142 4.10912 17.7965C3.23441 17.4484 2.56053 16.7745 2.20797 15.8953C1.68582 14.5788 1.80632 11.4549 1.80632 10C1.80632 8.54513 1.69028 5.41671 2.20797 4.10465C2.55606 3.22995 3.22995 2.55606 4.10912 2.2035C5.42564 1.68136 8.54959 1.80185 10.0045 1.80185C11.4593 1.80185 14.5878 1.68582 15.8998 2.2035C16.7745 2.5516 17.4484 3.22548 17.801 4.10465C18.3231 5.42118 18.2026 8.54513 18.2026 10C18.2026 11.4549 18.3231 14.5833 17.801 15.8953Z" />
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </section>
+                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+               </div>
+               <!-- имя  -->
+               <div class="employee__name">Alex Cutter</div>
+               <!-- должность -->
+               <div class="employee__position">Developer</div>
+            </div>
+
+            <!-- ========================================= -->
+            <div class="employee">
+               <!-- фото сотрудника -->
+               <div class="employee__photo elena">
+
+                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                  <section class="active__choice2 hide">
+                     <!-- соцсети -->
+                     <div class="active__container-social">
+                        <!-- active__twitter -->
+                        <div class="active__twitter">
+                           <a href="#!" class="active__twitter-link">
+                              <svg class="twitter__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
+                                 viewBox="0 0 20 18" fill="none">
+                                 <path
+                                    d="M17.9441 4.92638C17.9568 5.10403 17.9568 5.28173 17.9568 5.45938C17.9568 10.8781 13.8325 17.1218 6.29441 17.1218C3.97207 17.1218 1.81473 16.4492 0 15.2817C0.329961 15.3198 0.647187 15.3325 0.989844 15.3325C2.90605 15.3325 4.67004 14.6853 6.07867 13.5812C4.27664 13.5431 2.76648 12.3629 2.24617 10.7386C2.5 10.7766 2.75379 10.802 3.02031 10.802C3.38832 10.802 3.75637 10.7512 4.09898 10.6624C2.22082 10.2817 0.812148 8.63196 0.812148 6.63958V6.58884C1.35781 6.89341 1.99238 7.08376 2.66492 7.10911C1.56086 6.37306 0.837539 5.11673 0.837539 3.6954C0.837539 2.93399 1.04055 2.23603 1.3959 1.62688C3.41367 4.11419 6.44668 5.73853 9.84766 5.91622C9.78422 5.61165 9.74613 5.29442 9.74613 4.97716C9.74613 2.71825 11.5736 0.878174 13.8451 0.878174C15.0253 0.878174 16.0913 1.3731 16.84 2.17259C17.7664 1.99493 18.6547 1.65228 19.4416 1.18274C19.137 2.13454 18.4898 2.93403 17.6395 3.44161C18.4644 3.35282 19.2639 3.12435 19.9999 2.80712C19.4416 3.61927 18.7436 4.34259 17.9441 4.92638Z" />
+                              </svg>
+                           </a>
+                        </div>
+                        <!-- active__facebook -->
+                        <div class="active__facebook">
+                           <a href="#!" class="active__facebook-link">
+                              <svg class="facebook__svg-active" xmlns="http://www.w3.org/2000/svg" width="12"
+                                 height="20" viewBox="0 0 12 20" fill="none">
+                                 <path
+                                    d="M10.6539 11.25L11.2094 7.63047H7.73635V5.28164C7.73635 4.29141 8.22151 3.32617 9.77698 3.32617H11.3559V0.244531C11.3559 0.244531 9.92307 0 8.55315 0C5.69299 0 3.82346 1.73359 3.82346 4.87187V7.63047H0.644165V11.25H3.82346V20H7.73635V11.25H10.6539Z" />
+                              </svg>
+                           </a>
+                        </div>
+                        <!-- active__instagram -->
+                        <div class="active__instagram">
+                           <a href="#!" class="active__instagram-link">
+                              <svg class="instagram__svg-active" xmlns="http://www.w3.org/2000/svg" width="20"
+                                 height="20" viewBox="0 0 20 20" fill="none">
+                                 <path
+                                    d="M10.0045 4.87225C7.16613 4.87225 4.87672 7.16166 4.87672 10C4.87672 12.8383 7.16613 15.1277 10.0045 15.1277C12.8428 15.1277 15.1322 12.8383 15.1322 10C15.1322 7.16166 12.8428 4.87225 10.0045 4.87225ZM10.0045 13.3337C8.17026 13.3337 6.67076 11.8387 6.67076 10C6.67076 8.16133 8.16579 6.6663 10.0045 6.6663C11.8431 6.6663 13.3382 8.16133 13.3382 10C13.3382 11.8387 11.8387 13.3337 10.0045 13.3337ZM16.538 4.6625C16.538 5.32746 16.0025 5.85853 15.342 5.85853C14.677 5.85853 14.1459 5.32299 14.1459 4.6625C14.1459 4.00201 14.6815 3.46647 15.342 3.46647C16.0025 3.46647 16.538 4.00201 16.538 4.6625ZM19.9342 5.87638C19.8583 4.27424 19.4924 2.85507 18.3186 1.68582C17.1494 0.516568 15.7302 0.150619 14.1281 0.070289C12.4769 -0.0234297 7.52761 -0.0234297 5.87638 0.070289C4.2787 0.146156 2.85953 0.512105 1.68582 1.68136C0.512105 2.85061 0.150619 4.26978 0.070289 5.87192C-0.0234297 7.52315 -0.0234297 12.4724 0.070289 14.1236C0.146156 15.7258 0.512105 17.1449 1.68582 18.3142C2.85953 19.4834 4.27424 19.8494 5.87638 19.9297C7.52761 20.0234 12.4769 20.0234 14.1281 19.9297C15.7302 19.8538 17.1494 19.4879 18.3186 18.3142C19.4879 17.1449 19.8538 15.7258 19.9342 14.1236C20.0279 12.4724 20.0279 7.52761 19.9342 5.87638ZM17.801 15.8953C17.4529 16.7701 16.779 17.4439 15.8998 17.7965C14.5833 18.3186 11.4593 18.1981 10.0045 18.1981C8.54959 18.1981 5.42118 18.3142 4.10912 17.7965C3.23441 17.4484 2.56053 16.7745 2.20797 15.8953C1.68582 14.5788 1.80632 11.4549 1.80632 10C1.80632 8.54513 1.69028 5.41671 2.20797 4.10465C2.55606 3.22995 3.22995 2.55606 4.10912 2.2035C5.42564 1.68136 8.54959 1.80185 10.0045 1.80185C11.4593 1.80185 14.5878 1.68582 15.8998 2.2035C16.7745 2.5516 17.4484 3.22548 17.801 4.10465C18.3231 5.42118 18.2026 8.54513 18.2026 10C18.2026 11.4549 18.3231 14.5833 17.801 15.8953Z" />
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </section>
+                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+               </div>
+               <!-- имя  -->
+               <div class="employee__name">Elena Simpson</div>
+               <!-- должность -->
+               <div class="employee__position artist-elena">Artist</div>
+            </div>
+            <!-- ========================================= -->
+            <div class="employee">
+               <!-- фото сотрудника -->
+               <div class="employee__photo lily">
+
+                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                  <section class="active__choice3 hide">
+                     <!-- соцсети -->
+                     <div class="active__container-social">
+                        <!-- active__twitter -->
+                        <div class="active__twitter">
+                           <a href="#!" class="active__twitter-link">
+                              <svg class="twitter__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
+                                 viewBox="0 0 20 18" fill="none">
+                                 <path
+                                    d="M17.9441 4.92638C17.9568 5.10403 17.9568 5.28173 17.9568 5.45938C17.9568 10.8781 13.8325 17.1218 6.29441 17.1218C3.97207 17.1218 1.81473 16.4492 0 15.2817C0.329961 15.3198 0.647187 15.3325 0.989844 15.3325C2.90605 15.3325 4.67004 14.6853 6.07867 13.5812C4.27664 13.5431 2.76648 12.3629 2.24617 10.7386C2.5 10.7766 2.75379 10.802 3.02031 10.802C3.38832 10.802 3.75637 10.7512 4.09898 10.6624C2.22082 10.2817 0.812148 8.63196 0.812148 6.63958V6.58884C1.35781 6.89341 1.99238 7.08376 2.66492 7.10911C1.56086 6.37306 0.837539 5.11673 0.837539 3.6954C0.837539 2.93399 1.04055 2.23603 1.3959 1.62688C3.41367 4.11419 6.44668 5.73853 9.84766 5.91622C9.78422 5.61165 9.74613 5.29442 9.74613 4.97716C9.74613 2.71825 11.5736 0.878174 13.8451 0.878174C15.0253 0.878174 16.0913 1.3731 16.84 2.17259C17.7664 1.99493 18.6547 1.65228 19.4416 1.18274C19.137 2.13454 18.4898 2.93403 17.6395 3.44161C18.4644 3.35282 19.2639 3.12435 19.9999 2.80712C19.4416 3.61927 18.7436 4.34259 17.9441 4.92638Z" />
+                              </svg>
+                           </a>
+                        </div>
+                        <!-- active__facebook -->
+                        <div class="active__facebook">
+                           <a href="#!" class="active__facebook-link">
+                              <svg class="facebook__svg-active" xmlns="http://www.w3.org/2000/svg" width="12"
+                                 height="20" viewBox="0 0 12 20" fill="none">
+                                 <path
+                                    d="M10.6539 11.25L11.2094 7.63047H7.73635V5.28164C7.73635 4.29141 8.22151 3.32617 9.77698 3.32617H11.3559V0.244531C11.3559 0.244531 9.92307 0 8.55315 0C5.69299 0 3.82346 1.73359 3.82346 4.87187V7.63047H0.644165V11.25H3.82346V20H7.73635V11.25H10.6539Z" />
+                              </svg>
+                           </a>
+                        </div>
+                        <!-- active__instagram -->
+                        <div class="active__instagram">
+                           <a href="#!" class="active__instagram-link">
+                              <svg class="instagram__svg-active" xmlns="http://www.w3.org/2000/svg" width="20"
+                                 height="20" viewBox="0 0 20 20" fill="none">
+                                 <path
+                                    d="M10.0045 4.87225C7.16613 4.87225 4.87672 7.16166 4.87672 10C4.87672 12.8383 7.16613 15.1277 10.0045 15.1277C12.8428 15.1277 15.1322 12.8383 15.1322 10C15.1322 7.16166 12.8428 4.87225 10.0045 4.87225ZM10.0045 13.3337C8.17026 13.3337 6.67076 11.8387 6.67076 10C6.67076 8.16133 8.16579 6.6663 10.0045 6.6663C11.8431 6.6663 13.3382 8.16133 13.3382 10C13.3382 11.8387 11.8387 13.3337 10.0045 13.3337ZM16.538 4.6625C16.538 5.32746 16.0025 5.85853 15.342 5.85853C14.677 5.85853 14.1459 5.32299 14.1459 4.6625C14.1459 4.00201 14.6815 3.46647 15.342 3.46647C16.0025 3.46647 16.538 4.00201 16.538 4.6625ZM19.9342 5.87638C19.8583 4.27424 19.4924 2.85507 18.3186 1.68582C17.1494 0.516568 15.7302 0.150619 14.1281 0.070289C12.4769 -0.0234297 7.52761 -0.0234297 5.87638 0.070289C4.2787 0.146156 2.85953 0.512105 1.68582 1.68136C0.512105 2.85061 0.150619 4.26978 0.070289 5.87192C-0.0234297 7.52315 -0.0234297 12.4724 0.070289 14.1236C0.146156 15.7258 0.512105 17.1449 1.68582 18.3142C2.85953 19.4834 4.27424 19.8494 5.87638 19.9297C7.52761 20.0234 12.4769 20.0234 14.1281 19.9297C15.7302 19.8538 17.1494 19.4879 18.3186 18.3142C19.4879 17.1449 19.8538 15.7258 19.9342 14.1236C20.0279 12.4724 20.0279 7.52761 19.9342 5.87638ZM17.801 15.8953C17.4529 16.7701 16.779 17.4439 15.8998 17.7965C14.5833 18.3186 11.4593 18.1981 10.0045 18.1981C8.54959 18.1981 5.42118 18.3142 4.10912 17.7965C3.23441 17.4484 2.56053 16.7745 2.20797 15.8953C1.68582 14.5788 1.80632 11.4549 1.80632 10C1.80632 8.54513 1.69028 5.41671 2.20797 4.10465C2.55606 3.22995 3.22995 2.55606 4.10912 2.2035C5.42564 1.68136 8.54959 1.80185 10.0045 1.80185C11.4593 1.80185 14.5878 1.68582 15.8998 2.2035C16.7745 2.5516 17.4484 3.22548 17.801 4.10465C18.3231 5.42118 18.2026 8.54513 18.2026 10C18.2026 11.4549 18.3231 14.5833 17.801 15.8953Z" />
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </section>
+                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+               </div>
+               <!-- имя  -->
+               <div class="employee__name">Lily Allen</div>
+               <!-- должность -->
+               <div class="employee__position designer-lily">Graphic Designer</div>
+            </div>
+
+            <!-- ========================================= -->
+            <!-- выбрано для просмотра (active) -->
+            <section id="active" class="active__choice">
+               <!-- соцсети -->
+               <div class="active__container-social">
+                  <!-- active__twitter -->
+                  <div class="active__twitter">
+                     <a href="#!" class="active__twitter-link">
+                        <svg class="twitter__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
+                           viewBox="0 0 20 18" fill="none">
+                           <path
+                              d="M17.9441 4.92638C17.9568 5.10403 17.9568 5.28173 17.9568 5.45938C17.9568 10.8781 13.8325 17.1218 6.29441 17.1218C3.97207 17.1218 1.81473 16.4492 0 15.2817C0.329961 15.3198 0.647187 15.3325 0.989844 15.3325C2.90605 15.3325 4.67004 14.6853 6.07867 13.5812C4.27664 13.5431 2.76648 12.3629 2.24617 10.7386C2.5 10.7766 2.75379 10.802 3.02031 10.802C3.38832 10.802 3.75637 10.7512 4.09898 10.6624C2.22082 10.2817 0.812148 8.63196 0.812148 6.63958V6.58884C1.35781 6.89341 1.99238 7.08376 2.66492 7.10911C1.56086 6.37306 0.837539 5.11673 0.837539 3.6954C0.837539 2.93399 1.04055 2.23603 1.3959 1.62688C3.41367 4.11419 6.44668 5.73853 9.84766 5.91622C9.78422 5.61165 9.74613 5.29442 9.74613 4.97716C9.74613 2.71825 11.5736 0.878174 13.8451 0.878174C15.0253 0.878174 16.0913 1.3731 16.84 2.17259C17.7664 1.99493 18.6547 1.65228 19.4416 1.18274C19.137 2.13454 18.4898 2.93403 17.6395 3.44161C18.4644 3.35282 19.2639 3.12435 19.9999 2.80712C19.4416 3.61927 18.7436 4.34259 17.9441 4.92638Z" />
+                        </svg>
+                     </a>
+                  </div>
+                  <!-- active__facebook -->
+                  <div class="active__facebook">
+                     <a href="#!" class="active__facebook-link">
+                        <svg class="facebook__svg-active" xmlns="http://www.w3.org/2000/svg" width="12" height="20"
+                           viewBox="0 0 12 20" fill="none">
+                           <path
+                              d="M10.6539 11.25L11.2094 7.63047H7.73635V5.28164C7.73635 4.29141 8.22151 3.32617 9.77698 3.32617H11.3559V0.244531C11.3559 0.244531 9.92307 0 8.55315 0C5.69299 0 3.82346 1.73359 3.82346 4.87187V7.63047H0.644165V11.25H3.82346V20H7.73635V11.25H10.6539Z" />
+                        </svg>
+                     </a>
+                  </div>
+                  <!-- active__instagram -->
+                  <div class="active__instagram">
+                     <a href="#!" class="active__instagram-link">
+                        <svg class="instagram__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                           viewBox="0 0 20 20" fill="none">
+                           <path
+                              d="M10.0045 4.87225C7.16613 4.87225 4.87672 7.16166 4.87672 10C4.87672 12.8383 7.16613 15.1277 10.0045 15.1277C12.8428 15.1277 15.1322 12.8383 15.1322 10C15.1322 7.16166 12.8428 4.87225 10.0045 4.87225ZM10.0045 13.3337C8.17026 13.3337 6.67076 11.8387 6.67076 10C6.67076 8.16133 8.16579 6.6663 10.0045 6.6663C11.8431 6.6663 13.3382 8.16133 13.3382 10C13.3382 11.8387 11.8387 13.3337 10.0045 13.3337ZM16.538 4.6625C16.538 5.32746 16.0025 5.85853 15.342 5.85853C14.677 5.85853 14.1459 5.32299 14.1459 4.6625C14.1459 4.00201 14.6815 3.46647 15.342 3.46647C16.0025 3.46647 16.538 4.00201 16.538 4.6625ZM19.9342 5.87638C19.8583 4.27424 19.4924 2.85507 18.3186 1.68582C17.1494 0.516568 15.7302 0.150619 14.1281 0.070289C12.4769 -0.0234297 7.52761 -0.0234297 5.87638 0.070289C4.2787 0.146156 2.85953 0.512105 1.68582 1.68136C0.512105 2.85061 0.150619 4.26978 0.070289 5.87192C-0.0234297 7.52315 -0.0234297 12.4724 0.070289 14.1236C0.146156 15.7258 0.512105 17.1449 1.68582 18.3142C2.85953 19.4834 4.27424 19.8494 5.87638 19.9297C7.52761 20.0234 12.4769 20.0234 14.1281 19.9297C15.7302 19.8538 17.1494 19.4879 18.3186 18.3142C19.4879 17.1449 19.8538 15.7258 19.9342 14.1236C20.0279 12.4724 20.0279 7.52761 19.9342 5.87638ZM17.801 15.8953C17.4529 16.7701 16.779 17.4439 15.8998 17.7965C14.5833 18.3186 11.4593 18.1981 10.0045 18.1981C8.54959 18.1981 5.42118 18.3142 4.10912 17.7965C3.23441 17.4484 2.56053 16.7745 2.20797 15.8953C1.68582 14.5788 1.80632 11.4549 1.80632 10C1.80632 8.54513 1.69028 5.41671 2.20797 4.10465C2.55606 3.22995 3.22995 2.55606 4.10912 2.2035C5.42564 1.68136 8.54959 1.80185 10.0045 1.80185C11.4593 1.80185 14.5878 1.68582 15.8998 2.2035C16.7745 2.5516 17.4484 3.22548 17.801 4.10465C18.3231 5.42118 18.2026 8.54513 18.2026 10C18.2026 11.4549 18.3231 14.5833 17.801 15.8953Z" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </section>
+            <!-- ========================================= -->
+
+         </section>
+      </div>
+      <!-- ========================================= -->
+      <!-- accordeon -->
+
+      <!-- ограничивающий контейнер -->
+      <div class="content__container">
+         <!-- обертка для аккордеона -->
+         <section class="accordion__container hidden">
+            <!-- аккордеон -->
+            <div class="accordion">
+            <!-- <div data-accordion-appearance="899,max" class="accordion"> -->
+               <!-- элемент аккордеона -->
+               <details class="accordion__elem">
+                  <!-- Тег <details> используется для хранения информации, которую можно скрыть или показать по требованию пользователя. По умолчанию содержимое тега не отображается, для изменения статуса применяется атрибут open. -->
+                  <h3 data-title-for-element="one" class="accordion__title">home page</h3>
+                  <!-- заголовок для КОНТЕНТА элемента аккордеона -->
+                  <summary data-accordeon-summery="btn" class="open-btn" >Home</summary>
+                  <!-- заголовок элемента аккордеона, который является его кнопкой открытия -->
+                  <p data-dropdown-description="description1" class="text hidden">
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, blanditiis laboriosam pariatur
+                     quisquam sequi ducimus totam ea neque eum esse quia eius quidem! Tenetur laboriosam eum asperiores
+                     optio, dolorum saepe?
+                     Nulla nemo unde eligendi modi dolorum libero nam architecto veritatis velit eius quidem explicabo
+                     adipisci quibusdam harum aliquam, cumque, provident ratione distinctio vitae minima animi cum
+                     tempore earum non. Eveniet.
+                     Impedit blanditiis minima ducimus facere quae ut saepe aspernatur aut incidunt odio illum pariatur
+                     facilis suscipit esse alias, placeat officiis ratione repudiandae ea necessitatibus voluptate
+                     expedita ullam! Asperiores, voluptatibus quod.
+                     Aliquam voluptas aperiam ullam aliquid excepturi dolores eum dicta veritatis enim itaque expedita
+                     quis inventore vel, debitis voluptate modi ea facilis. Eum quisquam tempore consequuntur ut ipsum
+                     animi quis culpa.
+                     Tempora asperiores ipsam odio animi nobis voluptate, iusto ullam saepe eius neque inventore
+                     consequuntur. Deserunt non saepe maxime, ipsa deleniti reiciendis ipsam ullam molestiae molestias
+                     magnam animi ex repudiandae dolorum!
+                  </p>
+               </details>
+               <details class="accordion__elem">
+
+                  <h3 data-title-for-element="two" class="accordion__title">what we can</h3>
+
+                  <summary data-accordeon-summery="btn" class="open-btn" >Services</summary>
+
+                  <p data-dropdown-description="description2" class="text hidden">
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, blanditiis laboriosam pariatur
+                     quisquam sequi ducimus totam ea neque eum esse quia eius quidem! Tenetur laboriosam eum asperiores
+                     optio, dolorum saepe?
+                     Nulla nemo unde eligendi modi dolorum libero nam architecto veritatis velit eius quidem explicabo
+                     adipisci quibusdam harum aliquam, cumque, provident ratione distinctio vitae minima animi cum
+                     tempore earum non. Eveniet.
+                     Impedit blanditiis minima ducimus facere quae ut saepe aspernatur aut incidunt odio illum pariatur
+                     facilis suscipit esse alias, placeat officiis ratione repudiandae ea necessitatibus voluptate
+                     expedita ullam! Asperiores, voluptatibus quod.
+                     Aliquam voluptas aperiam ullam aliquid excepturi dolores eum dicta veritatis enim itaque expedita
+                     quis inventore vel, debitis voluptate modi ea facilis. Eum quisquam tempore consequuntur ut ipsum
+                     animi quis culpa.
+                     Tempora asperiores ipsam odio animi nobis voluptate, iusto ullam saepe eius neque inventore
+                     consequuntur. Deserunt non saepe maxime, ipsa deleniti reiciendis ipsam ullam molestiae molestias
+                     magnam animi ex repudiandae dolorum!
+                  </p>
+               </details>
+               <details class="accordion__elem">
+
+                  <h3 data-title-for-element="three" class="accordion__title">about Us</h3>
+
+                  <summary data-accordeon-summery="btn" class="open-btn" >About</summary>
+
+                  <p data-dropdown-description="description3" class="text hidden">
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, blanditiis laboriosam pariatur
+                     quisquam sequi ducimus totam ea neque eum esse quia eius quidem! Tenetur laboriosam eum asperiores
+                     optio, dolorum saepe?
+                     Nulla nemo unde eligendi modi dolorum libero nam architecto veritatis velit eius quidem explicabo
+                     adipisci quibusdam harum aliquam, cumque, provident ratione distinctio vitae minima animi cum
+                     tempore earum non. Eveniet.
+                     Impedit blanditiis minima ducimus facere quae ut saepe aspernatur aut incidunt odio illum pariatur
+                     facilis suscipit esse alias, placeat officiis ratione repudiandae ea necessitatibus voluptate
+                     expedita ullam! Asperiores, voluptatibus quod.
+                     Aliquam voluptas aperiam ullam aliquid excepturi dolores eum dicta veritatis enim itaque expedita
+                     quis inventore vel, debitis voluptate modi ea facilis. Eum quisquam tempore consequuntur ut ipsum
+                     animi quis culpa.
+                     Tempora asperiores ipsam odio animi nobis voluptate, iusto ullam saepe eius neque inventore
+                     consequuntur. Deserunt non saepe maxime, ipsa deleniti reiciendis ipsam ullam molestiae molestias
+                     magnam animi ex repudiandae dolorum!
+                  </p>
+               </details>
+               <details class="accordion__elem">
+                  <h3 data-title-for-element="four" class="accordion__title">Contact us</h3>
+
+                  <summary data-accordeon-summery="btn" class="open-btn" >Contacts</summary>
+
+                  <p data-dropdown-description="description4" class="text hidden">
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, blanditiis laboriosam pariatur
+                     quisquam sequi ducimus totam ea neque eum esse quia eius quidem! Tenetur laboriosam eum asperiores
+                     optio, dolorum saepe?
+                     Nulla nemo unde eligendi modi dolorum libero nam architecto veritatis velit eius quidem explicabo
+                     adipisci quibusdam harum aliquam, cumque, provident ratione distinctio vitae minima animi cum
+                     tempore earum non. Eveniet.
+                     Impedit blanditiis minima ducimus facere quae ut saepe aspernatur aut incidunt odio illum pariatur
+                     facilis suscipit esse alias, placeat officiis ratione repudiandae ea necessitatibus voluptate
+                     expedita ullam! Asperiores, voluptatibus quod.
+                     Aliquam voluptas aperiam ullam aliquid excepturi dolores eum dicta veritatis enim itaque expedita
+                     quis inventore vel, debitis voluptate modi ea facilis. Eum quisquam tempore consequuntur ut ipsum
+                     animi quis culpa.
+                     Tempora asperiores ipsam odio animi nobis voluptate, iusto ullam saepe eius neque inventore
+                     consequuntur. Deserunt non saepe maxime, ipsa deleniti reiciendis ipsam ullam molestiae molestias
+                     magnam animi ex repudiandae dolorum!
+                  </p>
+               </details>
+            </div>
+         </section>
+      </div>
+      <!-- ========================================= -->
+   </main>
+
+   <!-- ========================================= -->
+   <!-- ========================================= -->
+
+   <footer class="footer">
+      <div class="content__container">
+         <div class="footer__container">
+            <!-- флекс контейнер для footer -->
+            <div class="footer__content">
+               <!-- логотип -->
+               <div class="footer__logo-elements">
+                  <a href="#!" class="footer__logo">
+                     <img class="footer__logo-img" src="ITlife_img/logo.svg" alt="logo">
+                  </a>
+               </div>
+
+               <!-- меню -->
+               <nav class="footer__menu">
+                  <!-- список меню -->
+                  <ul class="footer__list-flex">
+                     <!-- пункты списка -->
+                     <li class="points">
+                        <!-- ссылка пункта -->
+                        <a href="#!" class="footer__link">Home</a>
+                     </li>
+                     <li class="points">
+                        <!-- ссылка пункта -->
+                        <a href="#!" class="footer__link">services</a>
+                     </li>
+                     <li class="points">
+                        <!-- ссылка пункта -->
+                        <a href="#!" class="footer__link">About</a>
+                     </li>
+                     <li class="points">
+                        <!-- ссылка пункта -->
+                        <a href="#!" class="footer__link">contacts</a>
+                     </li>
+                  </ul>
+               </nav>
+               <!-- ========================================= -->
+               <!-- флекс контейнер для соцсетей -->
+               <div class="footer__social-flex ">
+                  <!-- соцсети -->
+                  <!-- ========================================= -->
+                  <!-- синий twitter на белом фоне и синий бордер -->
+                  <div id="tl" class="footer__twitter-link">
+                     <a href="#!" class="twitter-link">
+                        <svg class="twitter__svg" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
+                           viewBox="0 0 20 18" fill="none">
+                           <path class="twitter__path"
+                              d="M17.9374 4.92639C17.9501 5.10405 17.9501 5.28174 17.9501 5.4594C17.9501 10.8781 13.8258 17.1218 6.2877 17.1218C3.96536 17.1218 1.80801 16.4492 -0.00671387 15.2817C0.323247 15.3198 0.640474 15.3325 0.98313 15.3325C2.89934 15.3325 4.66333 14.6853 6.07196 13.5812C4.26993 13.5431 2.75977 12.363 2.23946 10.7386C2.49329 10.7766 2.74708 10.802 3.0136 10.802C3.38161 10.802 3.74965 10.7512 4.09227 10.6624C2.21411 10.2817 0.805435 8.63198 0.805435 6.6396V6.58885C1.3511 6.89342 1.98567 7.08377 2.65821 7.10913C1.55415 6.37307 0.830825 5.11674 0.830825 3.69542C0.830825 2.93401 1.03383 2.23604 1.38918 1.6269C3.40696 4.1142 6.43997 5.73854 9.84094 5.91624C9.7775 5.61167 9.73942 5.29444 9.73942 4.97717C9.73942 2.71827 11.5668 0.878189 13.8384 0.878189C15.0186 0.878189 16.0846 1.37311 16.8333 2.1726C17.7597 1.99495 18.648 1.65229 19.4348 1.18276C19.1302 2.13456 18.4831 2.93405 17.6328 3.44163C18.4577 3.35284 19.2572 3.12436 19.9932 2.80713C19.4349 3.61928 18.7369 4.3426 17.9374 4.92639Z" />
+                           <!-- fill="#18B5DC" /> -->
+                        </svg>
+                     </a>
+                  </div>
+                  <!-- синий facebook на белом фоне и синий бордер -->
+                  <div id="tl" class="footer__facebook-link">
+                     <a href="#!" class="facebook-link">
+                        <svg class="facebook__svg" xmlns="http://www.w3.org/2000/svg" width="12" height="20"
+                           viewBox="0 0 12 20" fill="none">
+                           <path
+                              d="M10.7724 11.25L11.3429 7.63047H7.77634V5.28164C7.77634 4.29141 8.27456 3.32617 9.87189 3.32617H11.4933V0.244531C11.4933 0.244531 10.0219 0 8.61512 0C5.67799 0 3.75815 1.73359 3.75815 4.87187V7.63047H0.493286V11.25H3.75815V20H7.77634V11.25H10.7724Z" />
+                           <!-- fill="white"  -->
+                        </svg>
+                     </a>
+                  </div>
+                  <!-- синий instagram на белом фоне и синий бордер -->
+                  <div id="tl" class="footer__instagram-link">
+                     <a href="#!" class="instagram-link">
+                        <svg class="instagram__svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                           viewBox="0 0 20 20" fill="none">
+                           <path
+                              d="M9.99775 15.1277C7.15941 15.1277 4.87 12.8383 4.87 9.99998C4.87 7.16165 7.15941 4.87224 9.99775 4.87224C12.8361 4.87224 15.1255 7.16165 15.1255 9.99998C15.1255 12.8383 12.8361 15.1277 9.99775 15.1277ZM9.99775 6.66628C8.16354 6.66628 6.66404 8.16131 6.66404 9.99998C6.66404 11.8387 8.15908 13.3337 9.99775 13.3337C11.8364 13.3337 13.3315 11.8387 13.3315 9.99998C13.3315 8.16131 11.832 6.66628 9.99775 6.66628ZM16.5313 15.3375C16.5313 14.6725 15.9957 14.1415 15.3352 14.1415C14.6703 14.1415 14.1392 14.677 14.1392 15.3375C14.1392 15.998 14.6748 16.5335 15.3352 16.5335C15.9957 16.5335 16.5313 15.998 16.5313 15.3375ZM19.9275 14.1236C19.8516 15.7257 19.4856 17.1449 18.3119 18.3142C17.1427 19.4834 15.7235 19.8494 14.1214 19.9297C12.4701 20.0234 7.5209 20.0234 5.86967 19.9297C4.27199 19.8538 2.85282 19.4879 1.67911 18.3186C0.505392 17.1494 0.143905 15.7302 0.0635751 14.1281C-0.0301435 12.4768 -0.0301435 7.5276 0.0635751 5.87637C0.139443 4.27422 0.505392 2.85505 1.67911 1.6858C2.85282 0.516552 4.26752 0.150604 5.86967 0.0702744C7.5209 -0.0234451 12.4701 -0.0234451 14.1214 0.0702744C15.7235 0.146141 17.1427 0.512089 18.3119 1.6858C19.4812 2.85505 19.8471 4.27422 19.9275 5.87637C20.0212 7.5276 20.0212 12.4724 19.9275 14.1236ZM17.7942 4.10464C17.4461 3.22993 16.7723 2.55605 15.8931 2.20349C14.5766 1.68134 11.4526 1.80184 9.99775 1.80184C8.54288 1.80184 5.41446 1.6858 4.1024 2.20349C3.22769 2.55159 2.55381 3.22547 2.20125 4.10464C1.67911 5.42116 1.7996 8.54511 1.7996 9.99998C1.7996 11.4549 1.68357 14.5833 2.20125 15.8953C2.54935 16.77 3.22323 17.4439 4.1024 17.7965C5.41892 18.3186 8.54288 18.1981 9.99775 18.1981C11.4526 18.1981 14.581 18.3142 15.8931 17.7965C16.7678 17.4484 17.4417 16.7745 17.7942 15.8953C18.3164 14.5788 18.1959 11.4549 18.1959 9.99998C18.1959 8.54511 18.3164 5.4167 17.7942 4.10464Z" />
+                        </svg>
+                     </a>
+                  </div>
+                  <!-- синий linkedin на белом фоне и синий бордер -->
+                  <div id="tl" class="footer__linkedin-link">
+                     <a href="#!" class="linkedin-link">
+                        <svg class="linkedin__svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                           viewBox="0 0 20 20" fill="none">
+                           <path
+                              d="M4.47664 20H0.33012V6.64702H4.47664V20ZM2.40115 4.82555C1.07523 4.82555 -0.000244141 3.72732 -0.000244141 2.40139C-0.000244131 1.7645 0.252759 1.1537 0.703108 0.703352C1.15346 0.253003 1.76426 0 2.40115 0C3.03804 0 3.64884 0.253003 4.09919 0.703352C4.54954 1.1537 4.80254 1.7645 4.80254 2.40139C4.80254 3.72732 3.72662 4.82555 2.40115 4.82555ZM19.9957 20H15.8581V13.4999C15.8581 11.9507 15.8269 9.96406 13.7023 9.96406C11.5464 9.96406 11.2161 11.6471 11.2161 13.3882V20H7.07402V6.64702H11.0509V8.46849H11.1089C11.6625 7.41936 13.0148 6.31219 15.0322 6.31219C19.2288 6.31219 20.0002 9.07565 20.0002 12.665V20H19.9957Z" />
+                        </svg>
+                     </a>
+                  </div>
+                  <!-- синий telegram на белом фоне и синий бордер -->
+                  <div id="tl" class="footer__telegram-link">
+                     <a href="#!" class="telegram-link">
+                        <svg class="telegram__svg" xmlns="http://www.w3.org/2000/svg" width="20" height="16"
+                           viewBox="0 0 20 16" fill="none">
+                           <path
+                              d="M19.5497 1.45659L16.6523 15.0342C16.4337 15.9924 15.8637 16.2309 15.0536 15.7795L10.6389 12.5469L8.50873 14.5827C8.27299 14.817 8.07583 15.0129 7.6215 15.0129L7.93868 10.5452L16.1208 3.19851C16.4766 2.88334 16.0437 2.70873 15.5679 3.02389L5.45274 9.35271L1.09807 7.99836C0.150839 7.70449 0.133695 7.05713 1.29523 6.60568L18.3282 0.0852048C19.1168 -0.208664 19.8069 0.259822 19.5497 1.45659Z" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+
+   <!-- connect from the official website jQuery -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <!-- connection check jQuery -->
+   <!-- <script>
+        console.log($);
+    </script> -->
+   <!-- connect JS -->
+   <script src="ITlife_js/ITlife.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- todo Применены приемы: 
+     todo 1. правильный, фиксированный, адаптированный header и бургер - меню 
+     todo 2. анимированная кнопка-шторка (CALLBACK) 
+     todo 3. svg-спрайты для иконок соцсетей (не углубленно) 
+     todo 4. ф mouseover и mouseout при помощи jQuery для иконок соцсетей и фото сотрудников
+     todo 5. замена на курсор-изображение  
+     todo 6. центрирование блока active__container-social) внутри другого блока (active ) 
+     todo 7. очень важный прием == замена содержимого одного блока (employee__photo) на совсем другой блок (active__choice) при hover, причем второй блок (active__choice) включает в себя элементы (active__container-social) которые тоже активны (не статичные) = реализовано через код 
+     todo 8. в простом popup окне (от А.Дудукало) в заголовке применен метод создания текста на фоне картинки (клипа)
+     todo 9. созданы сниппеты для JS и HTML при использовании сниппед-генератора https://snippet-generator.app/ 
+     todo 10. созданы popup-ы для пунктов верхней навигации на data-атрибутах 
+     todo 11. создан простой аккардеон на нижний logo на JS (может работать без JS, если убрать hidden здесь   <p data-dropdown-description="description1" class="text hidden">...</p> ) -->
