@@ -7,51 +7,39 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- fonts -->
+   
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-   <!-- icon -->
+   
    <link rel="icon" href="ITlife_img/icon.ico" />
-   <!-- normalize connection directly from the server-->
+   
    <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize-opentype.css/0.2.4/normalize-opentype.min.css"
       integrity="sha512-C7dUXX4Gjv3oOFwuIJ2bMn+ZDvAlCLKH5JKzHMYVQUecTEVkHzu/SL5N6hkyOWyUdV13EIZDukiFcAl9LU/hAg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <!-- styles -->
+   
    <link rel="stylesheet" href="ITlife_css/ITlife.css" />
    <title>Document</title>
 </head>
 
 <body>
 
-   <!-- ========================================= -->
-   <!-- ========================================= -->
 
    <header class="header">
-      <!-- контейнер который ограничит ширину контентной части header -->
       <div class="header__container">
-         <!-- флекс контейнер для header-->
          <div class="header__flex">
-            <!-- логотип -->
             <a href="#" id="btnOpenPopupLogo" class="header__logo">
                <img class="logo__img" src="ITlife_img/logo.svg" alt="logo">
             </a>
 
-            <!-- todo попап А.Дудукало на JS (на Logo) -->
-            <!-- вся затемненная модальная область в которой будет окно -->
             <div id="hiddenArea" class="logo__hidden-area">
-               <!-- чтобы popup можно было закрыть в любом месте экрана запишем ссылку которую растянем на всю модальную область -->
                <a href="#!" id="id-for-close-hidden-area" class="logo__link-for-close-hidden-area"></a>
-               <!-- само модальное окно -->
                <div class="logo__modal-window">
-                  <!-- заголовок -->
                   <div class="logo__zagolovok-for-modal-window">
                      Modal window for Logo
                   </div>
-                  <!-- кнопка закрытия окна -->
                   <button id="id-for-close-modal-window" class="logo__btn-for-close-modal-window">&times;</button>
-                  <!-- контент модального окна-->
                   <p class="logo__content-modal-window">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
                      eos inventore est
                      minima obcaecati animi fugiat aliquid repellat, libero et officiis consequuntur fugit non maiores
@@ -65,35 +53,21 @@
                      Vel explicabo magni minima iste adipisci voluptatibus commodi sit dolores quibusdam.</p>
                </div>
             </div>
-            <!-- todo попап А.Дудукало на JS (на Logo) -->
 
-            <!-- бургер (закрывающий крестик-кнопка)-->
             <div class="header__burger">
-               <!-- span это средняя линия в крестике-бургере -->
                <span></span>
             </div>
-            <!-- меню -->
             <nav class="header__menu">
-               <!-- список меню -->
                <ul class="header__list">
 
-                  <!-- todo попапы ITDoctor на JS -->
-                  <!-- пункты списка -->
                   <li class="points">
-                     <!-- ссылка пункта (кнопка для открытия модальной области) -->
                      <a href="#" data-btn-for-open-modal-area="area-menu1" class="header__link">Home</a>
-                     <!-- вся модальная область (в ней окно и весь контент) -->
                      <div data-modal-area id="area-menu1" class="modal__area1 hide">
-                        <!-- модальное окно -->
                         <div class="modal__window-1">
-                           <!-- флекс для заголовка и кнопки закрытия окна -->
                            <div class="flex-for-zagolovok-and-btn-close-1">
-                              <!-- заголовок -->
                               <div class="modal__zagolovok-1">Modal window from ITDoctor 1</div>
-                              <!-- кнопка закрытия модального окна -->
                               <a href="#!" data-modal-btn-for_close="closeBtn1" class="modal__close-btn">&times;</a>
                            </div>
-                           <!-- контент модального окна -->
                            <p class="modal__card-content1">Lorem ipsum dolor sit amet consectetur
                               adipisicing elit. Voluptas tempore impedit
                               eum cum. Quaerat, culpa. Excepturi doloremque assumenda quasi? Fugiat,
@@ -112,20 +86,13 @@
                      </div>
                   </li>
                   <li class="points">
-                     <!-- ссылка пункта (кнопка для открытия модальной области) -->
                      <a href="#" data-btn-for-open-modal-area="area-menu2" class="header__link">services</a>
-                     <!-- вся модальная область (в ней окно и весь контент) -->
                      <div data-modal-area id="area-menu2" class="modal__area2 hide">
-                        <!-- модальное окно -->
                         <div class="modal__window-2">
-                           <!-- флекс для заголовка и кнопки закрытия окна -->
                            <div class="flex-for-zagolovok-and-btn-close-2">
-                              <!-- заголовок -->
                               <div class="modal__zagolovok-2">Modal window from ITDoctor 2</div>
-                              <!-- кнопка закрытия модального окна -->
                               <a href="#!" data-modal-btn-for_close="closeBtn2" class="modal__close-btn">&times;</a>
                            </div>
-                           <!-- контент модального окна -->
                            <p class="modal__card-content2">Lorem ipsum dolor sit amet consectetur
                               adipisicing elit. Voluptas tempore impedit
                               eum cum. Quaerat, culpa. Excepturi doloremque assumenda quasi? Fugiat,
@@ -136,20 +103,13 @@
                   </li>
 
                   <li class="points">
-                     <!-- ссылка пункта (кнопка для открытия модальной области) -->
                      <a href="#" data-btn-for-open-modal-area="area-menu3" class="header__link">About</a>
-                     <!-- вся модальная область (в ней окно и весь контент) -->
                      <div data-modal-area id="area-menu3" class="modal__area3 hide">
-                        <!-- модальное окно -->
                         <div class="modal__window-3">
-                           <!-- флекс для заголовка и кнопки закрытия окна -->
                            <div class="flex-for-zagolovok-and-btn-close-3">
-                              <!-- заголовок -->
                               <div class="modal__zagolovok-3">Modal window from ITDoctor 3</div>
-                              <!-- кнопка закрытия модального окна -->
                               <a href="#!" data-modal-btn-for_close="closeBtn3" class="modal__close-btn">&times;</a>
                            </div>
-                           <!-- контент модального окна -->
                            <p class="modal__card-content3">Lorem ipsum dolor sit amet consectetur
                               adipisicing elit. Voluptas tempore impedit
                               eum cum. Quaerat, culpa. Excepturi doloremque assumenda quasi? Fugiat,
@@ -160,20 +120,13 @@
                   </li>
 
                   <li class="points">
-                     <!-- ссылка пункта (кнопка для открытия модальной области) -->
                      <a href="#" data-btn-for-open-modal-area="area-menu4" class="header__link">contacts</a>
-                     <!-- вся модальная область (в ней окно и весь контент) -->
                      <div data-modal-area id="area-menu4" class="modal__area4 hide">
-                        <!-- модальное окно -->
                         <div class="modal__window-4">
-                           <!-- флекс для заголовка и кнопки закрытия окна -->
                            <div class="flex-for-zagolovok-and-btn-close-4">
-                              <!-- заголовок -->
                               <div class="modal__zagolovok-4">Modal window from ITDoctor 4</div>
-                              <!-- кнопка закрытия модального окна -->
                               <a href="#!" data-modal-btn-for_close="closeBtn4" class="modal__close-btn">&times;</a>
                            </div>
-                           <!-- контент модального окна -->
                            <p class="modal__card-content4">Lorem ipsum dolor sit amet consectetur
                               adipisicing elit. Voluptas tempore impedit
                               eum cum. Quaerat, culpa. Excepturi doloremque assumenda quasi? Fugiat,
@@ -182,55 +135,36 @@
                         </div>
                      </div>
                   </li>
-                  <!-- todo попапы ITDoctor на JS -->
 
-                  <!-- ==== -->
                   <button class="header__collback">
-                     <!-- ссылка-кнопка callback -->
                      <a href="#" class="header__link-collback">callback</a>
                   </button>
-                  <!-- ==== -->
 
                </ul>
             </nav>
-            <!-- кнопка collback -->
             <button class="header__collback">
-               <!-- ссылка callback -->
                <a href="#" class="header__link-collback">callback</a>
             </button>
          </div>
       </div>
    </header>
 
-   <!-- ========================================= -->
-   <!-- ========================================= -->
 
-   <!-- основной блок -->
    <main class="basic">
-      <!-- ограничивающий контейнер для основного блока -->
       <div class="content__container">
-         <!-- секция текста -->
          <section class="titles__text">
-            <!-- заголовок -->
             <h1 class="title__main">who we are</h1>
-            <!-- разделитель между текстами -->
             <div class="titles__divider"></div>
-            <!-- вспомогательный текст -->
             <h3 class="title__auxiliary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                incididunt ut labore et dolore magna
                aliqua.</h3>
          </section>
-         <!-- секция карточек сотрудников -->
          <section class="employees">
             <div class="employee">
-               <!-- фото сотрудника -->
                <div class="employee__photo jhon">
 
-                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
                   <section class="active__choice hide">
-                     <!-- соцсети -->
                      <div class="active__container-social">
-                        <!-- active__twitter -->
                         <div class="active__twitter">
                            <a href="#!" class="active__twitter-link">
                               <svg class="twitter__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
@@ -240,7 +174,6 @@
                               </svg>
                            </a>
                         </div>
-                        <!-- active__facebook -->
                         <div class="active__facebook">
                            <a href="#!" class="active__facebook-link">
                               <svg class="facebook__svg-active" xmlns="http://www.w3.org/2000/svg" width="12"
@@ -250,7 +183,6 @@
                               </svg>
                            </a>
                         </div>
-                        <!-- active__instagram -->
                         <div class="active__instagram">
                            <a href="#!" class="active__instagram-link">
                               <svg class="instagram__svg-active" xmlns="http://www.w3.org/2000/svg" width="20"
@@ -262,24 +194,16 @@
                         </div>
                      </div>
                   </section>
-                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
                </div>
-               <!-- имя -->
                <div class="employee__name">John Handson</div>
-               <!-- должность -->
                <div class="employee__position">Lead designer</div>
             </div>
-            <!-- ========================================= -->
             <div class="employee">
-               <!-- фото сотрудника -->
                <div class="employee__photo alex">
 
-                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
                   <section class="active__choice1 hide">
-                     <!-- соцсети -->
                      <div class="active__container-social">
-                        <!-- active__twitter -->
                         <div class="active__twitter">
                            <a href="#!" class="active__twitter-link">
                               <svg class="twitter__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
@@ -289,7 +213,6 @@
                               </svg>
                            </a>
                         </div>
-                        <!-- active__facebook -->
                         <div class="active__facebook">
                            <a href="#!" class="active__facebook-link">
                               <svg class="facebook__svg-active" xmlns="http://www.w3.org/2000/svg" width="12"
@@ -299,7 +222,6 @@
                               </svg>
                            </a>
                         </div>
-                        <!-- active__instagram -->
                         <div class="active__instagram">
                            <a href="#!" class="active__instagram-link">
                               <svg class="instagram__svg-active" xmlns="http://www.w3.org/2000/svg" width="20"
@@ -311,25 +233,17 @@
                         </div>
                      </div>
                   </section>
-                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
                </div>
-               <!-- имя  -->
                <div class="employee__name">Alex Cutter</div>
-               <!-- должность -->
                <div class="employee__position">Developer</div>
             </div>
 
-            <!-- ========================================= -->
             <div class="employee">
-               <!-- фото сотрудника -->
                <div class="employee__photo elena">
 
-                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
                   <section class="active__choice2 hide">
-                     <!-- соцсети -->
                      <div class="active__container-social">
-                        <!-- active__twitter -->
                         <div class="active__twitter">
                            <a href="#!" class="active__twitter-link">
                               <svg class="twitter__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
@@ -339,7 +253,6 @@
                               </svg>
                            </a>
                         </div>
-                        <!-- active__facebook -->
                         <div class="active__facebook">
                            <a href="#!" class="active__facebook-link">
                               <svg class="facebook__svg-active" xmlns="http://www.w3.org/2000/svg" width="12"
@@ -349,7 +262,6 @@
                               </svg>
                            </a>
                         </div>
-                        <!-- active__instagram -->
                         <div class="active__instagram">
                            <a href="#!" class="active__instagram-link">
                               <svg class="instagram__svg-active" xmlns="http://www.w3.org/2000/svg" width="20"
@@ -361,24 +273,16 @@
                         </div>
                      </div>
                   </section>
-                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
                </div>
-               <!-- имя  -->
                <div class="employee__name">Elena Simpson</div>
-               <!-- должность -->
                <div class="employee__position artist-elena">Artist</div>
             </div>
-            <!-- ========================================= -->
             <div class="employee">
-               <!-- фото сотрудника -->
                <div class="employee__photo lily">
 
-                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
                   <section class="active__choice3 hide">
-                     <!-- соцсети -->
                      <div class="active__container-social">
-                        <!-- active__twitter -->
                         <div class="active__twitter">
                            <a href="#!" class="active__twitter-link">
                               <svg class="twitter__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
@@ -388,7 +292,6 @@
                               </svg>
                            </a>
                         </div>
-                        <!-- active__facebook -->
                         <div class="active__facebook">
                            <a href="#!" class="active__facebook-link">
                               <svg class="facebook__svg-active" xmlns="http://www.w3.org/2000/svg" width="12"
@@ -398,7 +301,6 @@
                               </svg>
                            </a>
                         </div>
-                        <!-- active__instagram -->
                         <div class="active__instagram">
                            <a href="#!" class="active__instagram-link">
                               <svg class="instagram__svg-active" xmlns="http://www.w3.org/2000/svg" width="20"
@@ -410,21 +312,14 @@
                         </div>
                      </div>
                   </section>
-                  <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
                </div>
-               <!-- имя  -->
                <div class="employee__name">Lily Allen</div>
-               <!-- должность -->
                <div class="employee__position designer-lily">Graphic Designer</div>
             </div>
 
-            <!-- ========================================= -->
-            <!-- выбрано для просмотра (active) -->
             <section id="active" class="active__choice">
-               <!-- соцсети -->
                <div class="active__container-social">
-                  <!-- active__twitter -->
                   <div class="active__twitter">
                      <a href="#!" class="active__twitter-link">
                         <svg class="twitter__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
@@ -434,7 +329,6 @@
                         </svg>
                      </a>
                   </div>
-                  <!-- active__facebook -->
                   <div class="active__facebook">
                      <a href="#!" class="active__facebook-link">
                         <svg class="facebook__svg-active" xmlns="http://www.w3.org/2000/svg" width="12" height="20"
@@ -444,7 +338,6 @@
                         </svg>
                      </a>
                   </div>
-                  <!-- active__instagram -->
                   <div class="active__instagram">
                      <a href="#!" class="active__instagram-link">
                         <svg class="instagram__svg-active" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -456,27 +349,16 @@
                   </div>
                </div>
             </section>
-            <!-- ========================================= -->
 
          </section>
       </div>
-      <!-- ========================================= -->
-      <!-- accordeon -->
 
-      <!-- ограничивающий контейнер -->
       <div class="content__container">
-         <!-- обертка для аккордеона -->
          <section class="accordion__container hidden">
-            <!-- аккордеон -->
             <div class="accordion">
-            <!-- <div data-accordion-appearance="899,max" class="accordion"> -->
-               <!-- элемент аккордеона -->
                <details class="accordion__elem">
-                  <!-- Тег <details> используется для хранения информации, которую можно скрыть или показать по требованию пользователя. По умолчанию содержимое тега не отображается, для изменения статуса применяется атрибут open. -->
                   <h3 data-title-for-element="one" class="accordion__title">home page</h3>
-                  <!-- заголовок для КОНТЕНТА элемента аккордеона -->
                   <summary data-accordeon-summery="btn" class="open-btn" >Home</summary>
-                  <!-- заголовок элемента аккордеона, который является его кнопкой открытия -->
                   <p data-dropdown-description="description1" class="text hidden">
                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, blanditiis laboriosam pariatur
                      quisquam sequi ducimus totam ea neque eum esse quia eius quidem! Tenetur laboriosam eum asperiores
@@ -569,75 +451,54 @@
             </div>
          </section>
       </div>
-      <!-- ========================================= -->
    </main>
 
-   <!-- ========================================= -->
-   <!-- ========================================= -->
 
    <footer class="footer">
       <div class="content__container">
          <div class="footer__container">
-            <!-- флекс контейнер для footer -->
             <div class="footer__content">
-               <!-- логотип -->
                <div class="footer__logo-elements">
                   <a href="#!" class="footer__logo">
                      <img class="footer__logo-img" src="ITlife_img/logo.svg" alt="logo">
                   </a>
                </div>
 
-               <!-- меню -->
                <nav class="footer__menu">
-                  <!-- список меню -->
                   <ul class="footer__list-flex">
-                     <!-- пункты списка -->
                      <li class="points">
-                        <!-- ссылка пункта -->
                         <a href="#!" class="footer__link">Home</a>
                      </li>
                      <li class="points">
-                        <!-- ссылка пункта -->
                         <a href="#!" class="footer__link">services</a>
                      </li>
                      <li class="points">
-                        <!-- ссылка пункта -->
                         <a href="#!" class="footer__link">About</a>
                      </li>
                      <li class="points">
-                        <!-- ссылка пункта -->
                         <a href="#!" class="footer__link">contacts</a>
                      </li>
                   </ul>
                </nav>
-               <!-- ========================================= -->
-               <!-- флекс контейнер для соцсетей -->
                <div class="footer__social-flex ">
-                  <!-- соцсети -->
-                  <!-- ========================================= -->
-                  <!-- синий twitter на белом фоне и синий бордер -->
                   <div id="tl" class="footer__twitter-link">
                      <a href="#!" class="twitter-link">
                         <svg class="twitter__svg" xmlns="http://www.w3.org/2000/svg" width="20" height="18"
                            viewBox="0 0 20 18" fill="none">
                            <path class="twitter__path"
                               d="M17.9374 4.92639C17.9501 5.10405 17.9501 5.28174 17.9501 5.4594C17.9501 10.8781 13.8258 17.1218 6.2877 17.1218C3.96536 17.1218 1.80801 16.4492 -0.00671387 15.2817C0.323247 15.3198 0.640474 15.3325 0.98313 15.3325C2.89934 15.3325 4.66333 14.6853 6.07196 13.5812C4.26993 13.5431 2.75977 12.363 2.23946 10.7386C2.49329 10.7766 2.74708 10.802 3.0136 10.802C3.38161 10.802 3.74965 10.7512 4.09227 10.6624C2.21411 10.2817 0.805435 8.63198 0.805435 6.6396V6.58885C1.3511 6.89342 1.98567 7.08377 2.65821 7.10913C1.55415 6.37307 0.830825 5.11674 0.830825 3.69542C0.830825 2.93401 1.03383 2.23604 1.38918 1.6269C3.40696 4.1142 6.43997 5.73854 9.84094 5.91624C9.7775 5.61167 9.73942 5.29444 9.73942 4.97717C9.73942 2.71827 11.5668 0.878189 13.8384 0.878189C15.0186 0.878189 16.0846 1.37311 16.8333 2.1726C17.7597 1.99495 18.648 1.65229 19.4348 1.18276C19.1302 2.13456 18.4831 2.93405 17.6328 3.44163C18.4577 3.35284 19.2572 3.12436 19.9932 2.80713C19.4349 3.61928 18.7369 4.3426 17.9374 4.92639Z" />
-                           <!-- fill="#18B5DC" /> -->
                         </svg>
                      </a>
                   </div>
-                  <!-- синий facebook на белом фоне и синий бордер -->
                   <div id="tl" class="footer__facebook-link">
                      <a href="#!" class="facebook-link">
                         <svg class="facebook__svg" xmlns="http://www.w3.org/2000/svg" width="12" height="20"
                            viewBox="0 0 12 20" fill="none">
                            <path
                               d="M10.7724 11.25L11.3429 7.63047H7.77634V5.28164C7.77634 4.29141 8.27456 3.32617 9.87189 3.32617H11.4933V0.244531C11.4933 0.244531 10.0219 0 8.61512 0C5.67799 0 3.75815 1.73359 3.75815 4.87187V7.63047H0.493286V11.25H3.75815V20H7.77634V11.25H10.7724Z" />
-                           <!-- fill="white"  -->
                         </svg>
                      </a>
                   </div>
-                  <!-- синий instagram на белом фоне и синий бордер -->
                   <div id="tl" class="footer__instagram-link">
                      <a href="#!" class="instagram-link">
                         <svg class="instagram__svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -647,7 +508,6 @@
                         </svg>
                      </a>
                   </div>
-                  <!-- синий linkedin на белом фоне и синий бордер -->
                   <div id="tl" class="footer__linkedin-link">
                      <a href="#!" class="linkedin-link">
                         <svg class="linkedin__svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -657,7 +517,6 @@
                         </svg>
                      </a>
                   </div>
-                  <!-- синий telegram на белом фоне и синий бордер -->
                   <div id="tl" class="footer__telegram-link">
                      <a href="#!" class="telegram-link">
                         <svg class="telegram__svg" xmlns="http://www.w3.org/2000/svg" width="20" height="16"
@@ -674,13 +533,7 @@
    </footer>
 
 
-   <!-- connect from the official website jQuery -->
    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-   <!-- connection check jQuery -->
-   <!-- <script>
-        console.log($);
-    </script> -->
-   <!-- connect JS -->
    <script src="ITlife_js/ITlife.js"></script>
 </body>
 
@@ -689,15 +542,3 @@
 
 
 
-<!-- todo Применены приемы: 
-     todo 1. правильный, фиксированный, адаптированный header и бургер - меню 
-     todo 2. анимированная кнопка-шторка (CALLBACK) 
-     todo 3. svg-спрайты для иконок соцсетей (не углубленно) 
-     todo 4. ф mouseover и mouseout при помощи jQuery для иконок соцсетей и фото сотрудников
-     todo 5. замена на курсор-изображение  
-     todo 6. центрирование блока active__container-social) внутри другого блока (active ) 
-     todo 7. очень важный прием == замена содержимого одного блока (employee__photo) на совсем другой блок (active__choice) при hover, причем второй блок (active__choice) включает в себя элементы (active__container-social) которые тоже активны (не статичные) = реализовано через код 
-     todo 8. в простом popup окне (от А.Дудукало) в заголовке применен метод создания текста на фоне картинки (клипа)
-     todo 9. созданы сниппеты для JS и HTML при использовании сниппед-генератора https://snippet-generator.app/ 
-     todo 10. созданы popup-ы для пунктов верхней навигации на data-атрибутах 
-     todo 11. создан простой аккардеон на нижний logo на JS (может работать без JS, если убрать hidden здесь   <p data-dropdown-description="description1" class="text hidden">...</p> ) -->
