@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* Reset and base styles  */
 * {
   padding: 0px;
   margin: 0px;
@@ -11,21 +10,16 @@
   box-sizing: border-box;
 }
 
-/* Links */
 a,
 a:link,
 a:visited {
-  /* color: inherit; */
   text-decoration: none;
-  /* display: inline-block; */
 }
 
 a:hover {
-  /* color: inherit; */
   text-decoration: none;
 }
 
-/* Common */
 aside,
 nav,
 footer,
@@ -65,7 +59,6 @@ address {
   font-style: normal;
 }
 
-/* Form */
 textarea,
 button,
 select {
@@ -362,7 +355,7 @@ h3 {
   text-align: center;
   font-size: 16px;
   font-weight: 300;
-  line-height: 24px; /* 150% */
+  line-height: 24px; 
 }
 
 .active__choice, .active__choice1, .active__choice2, .active__choice3 {
@@ -908,7 +901,6 @@ h3 {
   padding: 30px;
 }
 
-/* ================ общая обертка аккардеона */
 .accordion__container {
   display: flex;
   flex-wrap: wrap;
@@ -917,14 +909,8 @@ h3 {
   background-color: #F6F6F6;
 }
 
-/* ================ стилизуем сам аккордеон */
 .accordion {
-  /* можно задать ему ширину (при свернутом)*/
-  /* min-width: 190px; */
-  /* можно задать ему ширину (при раскрытом)*/
-  /* max-width: 500px; */
   width: 500px;
-  /* надо добавить overflow: hidden , это св-во не позволяет картинке (или как здесь дочернему элементу) вылезать за пределы родительского блока (аккордеона). А дочерние элементы, в данном случае, это element-accordeona и zagolovok. И получается, что св-вом overflow: hidden обрезаем эти внутреннии (дочерние) элементы*/
   overflow: hidden;
   box-shadow: 0 0 12px 4px rgba(24, 181, 220, 0.5);
   border-radius: 25px;
@@ -946,7 +932,7 @@ h3 {
   background-color: rgb(8, 79, 97);
   color: #18B5DC;
   padding: 10px 40px 10px 20px;
-  outline: none; /*убирается разделяющая линия (служебная) между заголовком и открывающимся элементом*/
+  outline: none; 
   transition: 0.2s all;
 }
 
@@ -955,13 +941,10 @@ h3 {
   color: #FFF;
 }
 
-/* ! убираем служебный треугольничек слево от summery = это делается  при помощи ::marker */
 .open-btn::marker {
   content: "";
-  /* в данном примере происходит следующее == (ВСЕ, ЧТО ПСЕВДО, БЕЗ content: ""; не работает)  и такой записью у маркеров уменьшаем width = 0  */
 }
 
-/* делаем стрелки после (after) заголовков */
 .open-btn::after {
   display: block;
   content: "✪";
@@ -969,19 +952,14 @@ h3 {
   right: 15px;
   top: 50%;
   font-size: 35px;
-  /* и здесь, как обычно надо учитывать размер самого элемента и брать половину его высоты (как в данном случае) и на нее сдвигать. Сдвигать можно по-разному. Здесь еще один метод*/
-  transform: translateY(-50%); /*т.е переместить элемент по Y вверх (потому что минус 50% ) на 50% размера элемента (стрелочки)*/
-  /* добавим плавности для стрелочки */
+  transform: translateY(-50%); 
   transition: 0.5s all;
 }
 
-/* добавляем работу стрелочки = вверх-открыта, вниз-закрыта секция. Смысл здесь такой = когда открывается элемент аккордеона, то к классу тега details добавляется состояние open и вот на этой базе сделаем код*/
-/* в классе .accordion__elem обращаемся к состоянию open [open],затем дописываем класс стрелочки .open-btn::after и развернем ее в момент открытия (когда наступит open) на 180, но при этом надо сохранить translateY(-50%)*/
 .accordion__elem[open] .open-btn::after {
   transform: translateY(-50%) rotate(180deg);
 }
 
-/* стилизуем выпадающее описание */
 .text {
   padding: 20px;
   font-size: 22px;
@@ -999,4 +977,4 @@ h3 {
 
 body {
   font-family: "Lato", sans-serif;
-}/*# sourceMappingURL=ITlife.css.map */
+}
