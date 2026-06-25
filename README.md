@@ -1,7 +1,7 @@
-ITlife
-# HTML 5
+# ITlife
+## HTML 5
 ## CSS 3
-### JS
-data-attributes
+## JS
+## Data-attributes
 
-can you view [this project](https://pages.github.com/)
+can you view [this project](https://andrei-jk.github.io/ITlife/)
